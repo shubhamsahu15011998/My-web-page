@@ -1,47 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="../Icons/Intro.png" type="png">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <title>My Introduction page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords" content="htmlcss bootstrap sticky top menu, navbar, CSS examples" />
+  <meta name="description" content="Bootstrap sticky header menu for any type of project, Bootstrap 4" />  
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+  <!-- Bootstrap files (jQuery first, then Popper.js, then Bootstrap JS) -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+
+  <link rel="icon" href="../Icons/Intro.png" type="png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type ="text/css" href="../css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>My Introduction page</title>
 </head>
     
-<script>
-   function includeHTML() {
-    var z, i, elmnt, file, xhttp;
-    /*loop through a collection of all HTML elements:*/
-    z = document.getElementsByTagName("*");
-    for (i = 0; i < z.length; i++) {
-      elmnt = z[i];
-      /*search for elements with a certain atrribute:*/
-      file = elmnt.getAttribute("include");
-      if (file) {
-        /*make an HTTP request using the attribute value as the file name:*/
-        xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4) {
-            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-            /*remove the attribute, and call this function once more:*/
-            elmnt.removeAttribute("include");
-            includeHTML();
-          }
-        }      
-        xhttp.open("GET", file, true);
-        xhttp.send();
-        /*exit the function:*/
-        return;
-      }
-    }
-   };
-</script>
 
 <body>
-  <div id ="first_division">
+  <header id ="first_division">
     <div style = "padding-top: 50px;">
         <p style="font-size: 30px;"> My name is Shubham Kumar Sahu, I'm a profeesional </p>
         <h1 style="font-size: 70px;">Web Developer</h1>
@@ -55,161 +35,181 @@
         style=
         "padding-top: 50px; padding-bottom: 50px;"
     >
-</div>    
-    <header class="header">
-        <nav class="navbar navbar-nav navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Shubham Kumar Sahu</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation*/">
+  </header>    
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#" style="font-size: large; font-weight: bold;">Shubham Kumar Sahu</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
               <span class="navbar-toggler-icon"></span>
             </button>
           
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ">
+            <div class="collapse navbar-collapse" id="main_nav">
+              <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                  <a class="first_division" href="3">Home <span class="sr-only"></span></a>
+                  <a class="nav-link" href="#first_division">Home</a>
                 </li>
                 <li class="nav-item active">
-                  <a class="about" href="#">About Me <span class="sr-only"></span></a>
+                  <a class="nav-link" href="#about">About</a>
                 </li>
                 
                 <li class="nav-item active">
-                  <a class="nav-link" href="#services">Projects</a>
+                  <a class="nav-link" href="#skills">Skills</a>
                 </li>
-                <li class="nav-item">
-                  <a class="third_division" href="#">Technologies</a>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#projects">Projects</a>
                 </li>
-                <li class="nav-item">
-                  <a class="fourth_division" href="#">Contacts</a>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#contacts">Contacts</a>
                 </li>
-                <li class="nav-item">
-                  <a class="fifth_division" href="#">Social Media</a>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#drop_a_line">Message</a>
                 </li>
                   
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Disabled</a>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#footerSection">Follow us</a>
                 </li>
               </ul>
             </div>
       </nav>
-    </header>
-
+    
     <div id ="about">
       <div>
-          <p>Shubham Kumar Sahu hails from Jamshedpur. He has keen interest in the field of Machine Learning and also has a zeal for competitive programming.
+          <p style="font-style: italic;">Shubham Kumar Sahu hails from Jamshedpur. He has keen interest in the field of Machine Learning and also has a zeal for competitive programming.
             Beyond programming, Shubham loves traveling, especially to places with a lot of scenic beauty and exploring different cultures. He also loves learning 
             differing viewpoints on the same topics / issues which helps him broaden his knowledge & thinking. That's a great habit to have Shubham...much needed in the world today</p>
       </div>
     </div>
-  
-    <section id="services" class="pfblock pfblock-gray">
-      <div class="container" style="padding-top: 100px; padding-bottom: 200px;">
-        <div class="row" >
+    
+    <div id=skills>
+      <div id="btao" >
+        
+        <div id="head" >
           
-          <div class="col-sm-6 col-sm-offset-3" >
-  
-            <div class="pfblock-header wow fadeInUp" >
-              <h2 class="pfblock-title">This is what I have </h2>
-              <div class="pfblock-line"></div>
-              <div class="pfblock-subtitle">
-                The quality of employee that you need are mentioned as my badges. 
-              </div>
-            </div>
-  
-          </div>
-  
-      </div>
-      <br><br><br><br><br><br>
+          <h1>
+            TECHNOLOGIES
+          </h1>
+          <p style="padding-top: 25px; padding-bottom: 30px;  font-size: 20px;">
+            The quality of employee that you need, are mentioned as my badges. 
+          </p> 
+        </div>
+        
+        <div >
+          <div id="skill_1" >
             
-        <div class="row">
-  
-          <div class="col-sm-3">
-  
-            <div class="iconbox wow slideInLeft">
-              <div class="iconbox-icon">
-                <span class="icon-magic-wand"></span>
-              </div>
-              <div class="iconbox-text">
-                <h3 class="iconbox-title">Web Design</h3>
-                <div class="iconbox-desc">
-                  Currently working as an Application Developer Intern at technogise 
-                </div>
-              </div>
-            </div>
-  
+            <img 
+              src="https://s3.amazonaws.com/prod-www-blackline-com/blog/wp-content/uploads/2019/01/29163118/A-Conversation-With-BlackLines-Machine-Learning-Experts.jpg" 
+              alt="Machine Leaning" 
+              >
+            <h5>
+              MACHINE LEARNING
+            </h5>
+            <p>
+              I have underwent many machine learning courses and had build many small models  
+            </p> 
           </div>
-  
-          <div class="col-sm-3">
-  
-            <div class="iconbox wow slideInLeft">
-              <div class="iconbox-icon">
-                <span class="icon-puzzle"></span>
-              </div>
-              <div class="iconbox-text">
-                <h3 class="iconbox-title">Web Programming</h3>
-                <div class="iconbox-desc">
-                Have certification in JavaScript and Python programming.
-                </div>
-              </div>
-            </div>
-  
+          <div id="skill_2" >
+            <img 
+              src="https://content.techgig.com/thumb/msid-75430401,width-860,resizemode-4/5-tips-for-students-to-improve-coding-skills-during-college.jpg?" 
+              alt="Competitive Coding" 
+              >
+            <h5>
+              COMPETITIVE CODING
+            </h5>
+            <p>
+              I'm a four star coder of codechef platform and have zeal for the same  
+            </p> 
           </div>
-  
-          <div class="col-sm-3">
-  
-            <div class="iconbox wow slideInRight">
-              <div class="iconbox-icon">
-                <span class="icon-badge"></span>
-              </div>
-              <div class="iconbox-text">
-                <h3 class="iconbox-title">Machine learning</h3>
-                <div class="iconbox-desc">
-                Went through a lot of courses and earned many valuable badges
-              </div>
-              </div>
-            </div>
-  
+          <div id="skill_3" >
+            <img 
+              src="https://www.digitalorbiscreators.org/data/uploads/services/mobile-app-development.jpg" 
+              alt="App Development" 
+              >
+            <h5>
+              APP DEVELOPMENT
+            </h5>
+            <p>
+              Being an IT guy, I have proved that I can write clean, realiable and scalable   
+            </p> 
           </div>
-  
-          <div class="col-sm-3">
-  
-            <div class="iconbox wow slideInRight">
-              <div class="iconbox-icon">
-                <span class="icon-question"></span>
-              </div>
-              <div class="iconbox-text">
-                <h3 class="iconbox-title">Competitive  programming</h3>
-                <div class="iconbox-desc">
-                A four star coder at code chef, have zeal for competitive prrogramming 
-              </div>
-              </div>
-            </div>
-  
+          <div id="skill_4" >
+            <img 
+              src="https://media.bitdegree.org/storage/media/images/2018/08/what-is-a-web-developer.jpg" 
+              alt="Web Development" 
+              >
+            <h5>
+              WEB DEVELOPMENT
+            </h5>
+            <p>
+              As my web page is capable of showcasing my web development skills  
+            </p> 
           </div>
-  
-        </div><!-- .row -->
-      </div><!-- .container -->
-    </section>
-
-
-
-
-    <div id ="drop_a_line" style = "padding-bottom: 50px;">
-      <div style = "padding-top: 50px;">
-        <h1>Drop me a line here</h1>
-        <p>To have a clear view abuout anything conversation is a key feature</p>
+        </div>
+      </div>
+      
+      <div class="clearfix">
+        <br>
       </div>
     
-      <form action="/action_page.php">
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname" ><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname" ><br><br>
-        <label for="dname">Drop a line here :</label><br>
-        <textarea rows = "5" cols = "30" name = "description">
-        </textarea><br>
-        <input type="submit" value="Submit">
-      </form>
     </div>
+    
+    <div id="projects">
+      <div id="deep" >
+        
+        <div id="head" >
+          
+          <h1>
+            PROJECTS
+          </h1>
+          <p style="padding-top: 25px; padding-bottom: 30px;  font-size: 20px;">
+            These small projects give solution of a few real life problem 
+          </p> 
+        </div>
+        
+        <div >
+          <div id="skill__1" >
+            <img 
+              src="https://www.ruleoneinvesting.com/wp-content/uploads/2014/11/stock-market-trends-what-causes-stock-prices-to-change.jpg" 
+              alt="Machine Learning" 
+              >
+            <h5>
+              MACHINE LEARNING
+            </h5>
+            <p>
+              I have created a ML model that will predict the stock price of google
+            </p> 
+          </div>
+          <div id="skill__2" >
+            <img 
+              src="https://josephsteinberg.com/wp-content/uploads/2020/01/Facial-Recognition.png" 
+              alt="Deep Leaning" 
+              >
+            <h5>
+              DEEP LEARNING
+            </h5>
+            <p>
+              I have formed a deep neural network that can recognise the face of a human   
+            </p> 
+          </div>
+          <div id="skill__3" >
+            <img 
+              src="https://static.more.com/wp-content/uploads/migrated/u667333/amazon-first-review.jpg" 
+              alt="Web Scrapping" 
+              >
+            <h5>
+              WEB SCRAPPING
+            </h5>
+            <p>
+              This software can extract the reviews of sny product from the amazon website
+            </p> 
+          </div>
+        </div>
+      </div>
+      
+      <div class="clearfix">
+        <br>
+      </div>
+    
+    </div>
+    
     <div id ="contacts">
       <div>
         <h1>
@@ -223,27 +223,39 @@
         <h3>Address : Viman Nagar, Pune, Maharashtra</h3>
 
       </div>
-      
-  </div>
+    </div>
   
+
+
+    <div id ="drop_a_line" >
+      <div style = "padding-top: 50px;">
+        <h1>Drop me a line here</h1>
+        <p style="padding-top: 25px; padding-bottom: 30px;  font-size: 20px;">
+          To have a clear view abuout anything conversation is the key feature
+        </p>
+      </div>
+    
+      <form action="/action_page.php">
+        <textarea rows="1" cols="50" placeholder="Name"></textarea><br><br>
+        <textarea rows="1" cols="50" placeholder="Email ID"></textarea><br><br>
+        <textarea rows="4" cols="50" placeholder="Your message here..."></textarea><br><br>
+        <input  type="submit" value="Submit" >
+      </form>
+    </div>
+    
     <section id="footerSection">
       <h4>Follow Us</h4>
         <div class="footerMedia">
-          <a href="#facebook"><i class="fa fa-facebook-f"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=100005235104829"><i class="fa fa-facebook-f"></i></a>
           <a href="#twitter"><i class="fa fa-twitter"></i></a>
-          <a href="#google"><i class="fa fa-google"></i></a>
-          <a href="#instagram"><i class="fa fa-instagram"></i></a>
-          <a href="#linkedin"><i class="fa fa-linkedin"></i></a>
+          <a href="shubhamsahu.15011998@gmail.com"><i class="fa fa-google"></i></a>
+          <a href="https://www.instagram.com/sahil_sahu_1998/"><i class="fa fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/shubham-kumar-sahu-4727b0165/"><i class="fa fa-linkedin"></i></a>
           <a href="#" id="button1" title="Go To Top">^</a>
         </div>
-      <p>Presented by <a href="#">shubhams.sahu15011998@gmail.com</a></p>
+      <p>Presented by <a href="#">shubham@developer</a></p>
     </section>
-
-    
-    <script>
-        includeHTML();
-    </script>
-
+    <script src="../JS/code.js"></script>
 </body>
 
 </html>

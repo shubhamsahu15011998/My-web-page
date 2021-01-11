@@ -1,0 +1,138 @@
+#skills {
+    background-color: darkkhaki;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+#projects{
+    background-color:cornsilk; 
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+#projects img{
+    height:120px;
+    width:140px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 50%;
+}
+
+#skills img{
+    height:120px;
+    width:140px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 50%;
+} 
+
+#btao,#deep{
+    text-align: center;
+    box-sizing: border-box;
+    padding-bottom: 50px;
+    padding-left: 15%;
+    padding-right: 5%;
+}
+.clearfix:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#skill__1,#skill__2,#skill__3{
+    width: 27%;
+    float: left;
+    background-color: beige;
+    background-clip: content-box;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#skill_1,#skill_2,#skill_3,#skill_4{
+    width: 21%;
+    float: left;
+    background-color: beige;
+    background-clip: content-box;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#first_division{
+    background-image: url("https://img.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg?size=626&ext=jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+}
+
+#drop_a_line{
+    background-color:cornsilk; 
+    text-align: center;    
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+
+.block {
+    align-self:center;
+    text-align:center;
+    display: block;
+    width: 200px;
+    height: 30px;
+    border: none;
+    background-color:burlywood ;
+    padding: 14px 28px;
+    font-size: 16px;
+}
+  
+#contacts{
+    text-align: left;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    padding-left: 30%;
+    padding-right: 30%;
+    background-color:grey; 
+}
+#services{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 250px;
+    padding-right: 250px;
+    background-color:grey; 
+    text-align: center;    
+}
+
+#about{
+    font-size: 20px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    padding-left: 250px;
+    padding-right: 250px;
+    background-color:cornsilk; 
+    text-align: justify;    
+}
+
+
+#footerSection {
+    padding: 3% 3%;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+  }
+  .footerMedia {
+    padding: 1%;
+  }
+  .footerMedia a{
+    display: inline-block;
+    padding: 8px 16px 8px 16px;
+    background-color: grey;
+    color: #fff;
+    text-align: center;
+  }
+  .footerMedia a:hover {
+    background-color: lightgrey;
+    color: #000;
+  }
